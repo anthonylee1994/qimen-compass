@@ -1,5 +1,5 @@
-function App() {
-    return <div className="App">AAA</div>;
-}
+import React from "react";
 
-export default App;
+export const App = React.memo(() => {
+    return <div className="App">AAA</div>;
+});
