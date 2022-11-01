@@ -1,5 +1,8 @@
 import React from "react";
+import {QimenUtil} from "./utils/QimenUtil";
 
 export const App = React.memo(() => {
-    return <div className="App">AAA</div>;
+    console.log(QimenUtil.result());
+
+    return <div>AAA</div>;
 });
