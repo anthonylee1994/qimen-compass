@@ -1,5 +1,4 @@
 import React from "react";
-// import {QimenUtil} from "./utils/QimenUtil";
 import {Compass} from "./components/Compass";
 import {Flex} from "@chakra-ui/react";
 import {useCompass} from "./hooks/useCompass";
