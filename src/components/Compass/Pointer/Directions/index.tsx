@@ -11,7 +11,7 @@ export const Directions = React.memo(() => {
                 北
             </Direction>
 
-            <Direction color="gray.300" transform="rotate(45deg)" right="15px" top="15px" fontSize={8}>
+            <Direction color="gray.300" transform="rotate(45deg)" right="15px" top="18px" fontSize={8}>
                 東北
             </Direction>
 
@@ -19,7 +19,7 @@ export const Directions = React.memo(() => {
                 東
             </Direction>
 
-            <Direction color="gray.300" transform="rotate(135deg)" right="15px" bottom="15px" fontSize={8}>
+            <Direction color="gray.300" transform="rotate(135deg)" right="15px" bottom="18px" fontSize={8}>
                 東南
             </Direction>
 
@@ -27,7 +27,7 @@ export const Directions = React.memo(() => {
                 南
             </Direction>
 
-            <Direction color="gray.300" transform="rotate(225deg)" left="15px" bottom="15px" fontSize={8}>
+            <Direction color="gray.300" transform="rotate(225deg)" left="15px" bottom="18px" fontSize={8}>
                 西南
             </Direction>
 
@@ -35,7 +35,7 @@ export const Directions = React.memo(() => {
                 西
             </Direction>
 
-            <Direction color="gray.300" transform="rotate(314deg)" left="15px" top="15px" fontSize={8}>
+            <Direction color="gray.300" transform="rotate(314deg)" left="15px" top="18px" fontSize={8}>
                 西北
             </Direction>
 
