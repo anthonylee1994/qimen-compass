@@ -1,4 +1,4 @@
 import React from "react";
-import {QimenResult} from "../utils/QimenUtil/types";
+import {QimenResult} from "utils/QimenUtil/types";
 
 export const QimenResultContext = React.createContext<QimenResult | undefined>(undefined);

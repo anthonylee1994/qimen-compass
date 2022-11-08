@@ -1,9 +1,8 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from "reportWebVitals";
 import {ChakraProvider, extendTheme} from "@chakra-ui/react";
-import {App} from "./app";
-import "./index.css";
+import {App} from "app";
+import "index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 

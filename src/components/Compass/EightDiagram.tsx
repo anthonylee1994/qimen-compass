@@ -1,8 +1,8 @@
 import React from "react";
-import {QimenResultContext} from "../../contexts/QimenResultContext";
-import {八卦} from "../../utils/QimenUtil/types";
+import {QimenResultContext} from "contexts/QimenResultContext";
+import {八卦} from "utils/QimenUtil/types";
 import {Box, theme} from "@chakra-ui/react";
-import {QimenUtil} from "../../utils/QimenUtil";
+import {QimenUtil} from "utils/QimenUtil";
 import {Sector} from "./Sector";
 
 interface Props {
@@ -85,7 +85,7 @@ export const EightDiagram = React.memo<Props>(({children}) => {
                                 top="6px"
                                 right="15px"
                                 bgColor={QimenUtil.heavenColor(qimenResult.地盤[value])}
-                                color='white'
+                                color="white"
                             >
                                 {qimenResult.地盤[value]}
                             </Box>

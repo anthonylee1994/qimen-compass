@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {Box, Text} from "@chakra-ui/react";
-import {AngleContext} from "../contexts/AngleContext";
+import {AngleContext} from "contexts/AngleContext";
 
 export const AngleDebugger = React.memo(() => {
     const angle = useContext(AngleContext);

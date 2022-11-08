@@ -1,14 +1,14 @@
 import React from "react";
-import {Compass} from "./components/Compass";
+import {Compass} from "components/Compass";
 import {Flex} from "@chakra-ui/react";
-import {useCompass} from "./hooks/useCompass";
-import {RequestPermissionButton} from "./components/RequestPermissionButton";
-import {AngleDebugger} from "./components/AngleDebugger";
-import {AngleContext} from "./contexts/AngleContext";
-import {QimenUtil} from "./utils/QimenUtil";
-import {QimenResultContext} from "./contexts/QimenResultContext";
-import {BaziUtil} from "./utils/BaziUtil";
-import {BaziResultContext} from "./contexts/BaziResultContext";
+import {useCompass} from "hooks/useCompass";
+import {RequestPermissionButton} from "components/RequestPermissionButton";
+import {AngleDebugger} from "components/AngleDebugger";
+import {QimenUtil} from "utils/QimenUtil";
+import {BaziUtil} from "utils/BaziUtil";
+import {AngleContext} from "contexts/AngleContext";
+import {QimenResultContext} from "contexts/QimenResultContext";
+import {BaziResultContext} from "contexts/BaziResultContext";
 
 export const App = React.memo(() => {
     const {init, angle, requestPermission} = useCompass();

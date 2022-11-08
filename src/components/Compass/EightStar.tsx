@@ -1,8 +1,8 @@
 import React from "react";
-import {QimenResultContext} from "../../contexts/QimenResultContext";
-import {星} from "../../utils/QimenUtil/types";
+import {QimenResultContext} from "contexts/QimenResultContext";
+import {星} from "utils/QimenUtil/types";
 import {Box, theme} from "@chakra-ui/react";
-import {QimenUtil} from "../../utils/QimenUtil";
+import {QimenUtil} from "utils/QimenUtil";
 import {Sector} from "./Sector";
 
 interface Props {

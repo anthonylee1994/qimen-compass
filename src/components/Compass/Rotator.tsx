@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {EightBeast} from "./EightBeast";
 import {Box} from "@chakra-ui/react";
-import {AngleContext} from "../../contexts/AngleContext";
+import {AngleContext} from "contexts/AngleContext";
 import {EightDoor} from "./EightDoor";
 import {EightStar} from "./EightStar";
 import {EightDiagram} from "./EightDiagram";

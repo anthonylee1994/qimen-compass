@@ -11,13 +11,13 @@ export const RequestPermissionButton = React.memo<Props>(({onClick}) => {
         <IconButton
             _hover={{}}
             _active={{}}
-            borderRadius='full'
+            borderRadius="full"
             borderColor="red.400"
             variant="outline"
             onClick={onClick}
             position="absolute"
-            top={3}
-            left={3}
+            bottom={3}
+            right={3}
             aria-label="request permission"
             icon={<RepeatIcon color="white" />}
         />
