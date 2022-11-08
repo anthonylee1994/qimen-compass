@@ -13,10 +13,10 @@ export const Pin = React.memo(() => {
                 boxShadow="1px 1px 2px 0 rgb(0 0 0 / 50%)"
                 position="absolute"
                 left="calc(50% - 4px)"
-                top="50%"
+                top="calc(50% - 4px)"
                 borderRadius="full"
-                width={2}
-                height={2}
+                width="8px"
+                height="8px"
                 background={`radial-gradient(${theme.colors.gray[300]} 0, ${theme.colors.gray[500]} 100%)`}
             />
         </Box>

@@ -1,14 +1,13 @@
 import React from "react";
-import {Compass} from "components/Compass";
 import {Flex} from "@chakra-ui/react";
 import {useCompass} from "hooks/useCompass";
-import {RequestPermissionButton} from "components/RequestPermissionButton";
-import {AngleDebugger} from "components/AngleDebugger";
 import {QimenUtil} from "utils/QimenUtil";
 import {BaziUtil} from "utils/BaziUtil";
 import {AngleContext} from "contexts/AngleContext";
 import {QimenResultContext} from "contexts/QimenResultContext";
 import {BaziResultContext} from "contexts/BaziResultContext";
+import {Compass} from "components/Compass";
+import {RequestPermissionButton} from "components/RequestPermissionButton";
 
 export const App = React.memo(() => {
     const {init, angle, requestPermission} = useCompass();
@@ -28,7 +27,6 @@ export const App = React.memo(() => {
                     <Flex height="full" justifyContent="center" alignItems="center">
                         <RequestPermissionButton onClick={requestPermission} />
                         <Compass />
-                        <AngleDebugger />
                     </Flex>
                 </BaziResultContext.Provider>
             </QimenResultContext.Provider>
