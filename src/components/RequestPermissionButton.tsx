@@ -16,7 +16,7 @@ export const RequestPermissionButton = React.memo<Props>(({onClick}) => {
             variant="outline"
             onClick={onClick}
             position="absolute"
-            bottom={3}
+            top={3}
             right={3}
             aria-label="request permission"
             icon={<RepeatIcon color="white" />}

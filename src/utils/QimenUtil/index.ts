@@ -176,6 +176,8 @@ export class QimenUtil {
                 return "☷坤二";
             case "兌":
                 return "☱兌七";
+            default:
+                return "　中五";
         }
     }
 

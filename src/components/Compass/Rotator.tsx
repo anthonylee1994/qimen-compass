@@ -15,7 +15,7 @@ export const Rotator = React.memo<Props>(({children}) => {
     const angle = useContext(AngleContext);
 
     return (
-        <Box transform={`rotate(${angle}deg)`}>
+        <Box transform={`rotateZ(${360 - angle}deg)`}>
             <OtherMessage>
                 <EightDiagram>
                     <EightStar>

@@ -6,7 +6,7 @@ export const Pin = React.memo(() => {
     const angle = React.useContext(AngleContext);
 
     return (
-        <Box transform={`rotate(-${angle}deg)`} position="relative" width={90} height={90}>
+        <Box transform={`rotateZ(-${360 - angle}deg)`} position="relative" width={90} height={90}>
             <Box position="absolute" left={0} top={0} width={90} height={90} clipPath="polygon(50% 0%, 47.5% 100%, 50% 100%)" bgColor={theme.colors.gray[500]} />
             <Box position="absolute" left={0} top={0} width={90} height={90} clipPath="polygon(50% 0%, 50% 100%, 52.5% 100%)" bgColor={theme.colors.gray[700]} />
             <Box
