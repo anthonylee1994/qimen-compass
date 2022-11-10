@@ -9,13 +9,28 @@ interface Props {
 }
 
 export const DateTimePicker = React.memo<Props>(({date, onChange}) => {
+    const onBack = React.useCallback(() => {
+        onChange(moment(date).subtract(2, "hour").toDate());
+    }, [date, onChange]);
+
+    const onForward = React.useCallback(() => {
+        onChange(moment(date).add(2, "hour").toDate());
+    }, [date, onChange]);
+
+    const onInputChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.value) {
+            onChange(new Date(e.target.value));
+        }
+    }, [onChange]);
+
     return (
         <InputGroup size="md" position="absolute" top={3} left={3} width={250}>
             <InputLeftElement>
-                <IconButton borderRadius='full' onClick={() => onChange(moment(date).subtract(2, "hour").toDate())} colorScheme="yellow" size="sm" aria-label="back" icon={<ArrowBackIcon />} />
+                <IconButton borderRadius="full" onClick={onBack} colorScheme="yellow" size="sm" aria-label="back" icon={<ArrowBackIcon />} />
             </InputLeftElement>
             <Input
-                borderRadius='50px'
+                required
+                borderRadius="50px"
                 borderColor="red.300"
                 borderWidth="1px"
                 _focus={{borderColor: "white"}}
@@ -25,10 +40,11 @@ export const DateTimePicker = React.memo<Props>(({date, onChange}) => {
                 variant="filled"
                 type="datetime-local"
                 value={moment(date).format("YYYY-MM-DDTHH:mm")}
-                onChange={e => onChange(new Date(e.target.value))}
+                onChange={onInputChange}
+                onReset={_ => onChange(new Date())}
             />
             <InputRightElement>
-                <IconButton borderRadius='full' onClick={() => onChange(moment(date).add(2, "hour").toDate())} colorScheme="yellow" size="sm" aria-label="forward" icon={<ArrowForwardIcon />} />
+                <IconButton borderRadius="full" onClick={onForward} colorScheme="yellow" size="sm" aria-label="forward" icon={<ArrowForwardIcon />} />
             </InputRightElement>
         </InputGroup>
     );

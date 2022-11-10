@@ -1,4 +1,4 @@
-const bigInt = require("./BigInteger.min.js");
+import bigInt from "./BigInteger.min";
 
 Array.prototype.space = function (start, n) {
     let ret = [];
@@ -14,7 +14,8 @@ Array.prototype.space = function (start, n) {
     });
     return ret;
 };
-module.exports = class Config {
+
+export class Config {
     static mod(n, m) {
         if (n > 0) {
             return n % m;

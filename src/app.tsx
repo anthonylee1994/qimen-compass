@@ -28,7 +28,7 @@ export const App = React.memo(() => {
             <DateContext.Provider value={date}>
                 <QimenResultContext.Provider value={qimenResult}>
                     <BaziResultContext.Provider value={baziResult}>
-                        <Flex height="calc(100% - 90px)" justifyContent="center" alignItems="center">
+                        <Flex height="calc(100% - 108px)" justifyContent="center" alignItems="center">
                             {canRequestPermission && <RequestPermissionButton onClick={requestPermission} />}
                             <DateTimePicker date={date} onChange={setDate} />
                             <Compass />

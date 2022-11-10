@@ -10,7 +10,7 @@
  * @公曆轉農曆：calendar.solar2lunar(1987,11,01); //[you can ignore params of prefix 0]
  * @農曆轉公曆：calendar.lunar2solar(1987,09,10); //[you can ignore params of prefix 0]
  */
-module.exports = {
+export const Calendar = {
     /**
      * 農曆1900-2100的潤大小信息表
      * @Array Of Property

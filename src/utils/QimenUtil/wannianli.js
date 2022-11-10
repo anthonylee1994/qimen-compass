@@ -1,4 +1,4 @@
-let WanNianLi = (function () {
+export const Wannianli = (function () {
     //天幹序數：1（甲），2（乙），……
     let __TianGan = ["", "甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"],
         //地支序數：1（寅），2（卯），……
@@ -108,6 +108,7 @@ let WanNianLi = (function () {
             10: "亥",
             11: "子",
         };
+
     /**
      * 計算兩個日期之間的天數
      * @param {Object} date1
@@ -129,10 +130,11 @@ let WanNianLi = (function () {
             return year % 4 === 0;
         }
     }
+
     /**
      * 獲取月份基數
-     * | 月份	| 1 | 2  | 3  | 4  | 5 | 6  | 7 | 8  | 9 | 10 | 11 | 12 |
-     * | 月基數	| 0 | 31 | -1 | 30 | 0 | 31 | 1 | 32 | 3 | 33 | 4  | 34 |
+     * | 月份    | 1 | 2  | 3  | 4  | 5 | 6  | 7 | 8  | 9 | 10 | 11 | 12 |
+     * | 月基數    | 0 | 31 | -1 | 30 | 0 | 31 | 1 | 32 | 3 | 33 | 4  | 34 |
      * @param {Object} month
      */
     function getMonthBase(month) {
@@ -140,6 +142,7 @@ let WanNianLi = (function () {
         let base = [undefined, 0, 31, -1, 30, 0, 31, 1, 32, 3, 33, 4, 34];
         return base[month];
     }
+
     /**
      * 獲取指定年份所屬的世紀
      * @param {Object} year
@@ -151,6 +154,7 @@ let WanNianLi = (function () {
         }
         return parseInt(year / 100) + 1;
     }
+
     /**
      * 根據世紀，計算該世紀常數。公式：X = 44*(C-17) + (C-17)/4 + 3。C：世紀，X：世紀常數
      * @param {Object} century
@@ -159,6 +163,7 @@ let WanNianLi = (function () {
         century = Number(century);
         return (44 * (century - 17) + parseInt((century - 17) / 4) + 3) % 60;
     }
+
     /**
      * 根據高氏日柱公式，獲取指定日期的天幹地支。
      * 公式：r = s/4*6 + 5*(s/4*3+u)+m+d+x。
@@ -188,6 +193,7 @@ let WanNianLi = (function () {
         r === 0 && (r = 60);
         return r;
     }
+
     /**
      * 獲取年幹。公式：年幹=年份個位數-3。適用於任何西元年，個位數小於3時，借10
      * @param {Object} year
@@ -199,6 +205,7 @@ let WanNianLi = (function () {
         index -= 3;
         return index;
     }
+
     /**
      * 獲取年支。公式：年支=(年份+7)/12取余數。整除余0即12，為丑。
      * @param {Object} year
@@ -206,6 +213,7 @@ let WanNianLi = (function () {
     function getNianZhiIndex(year) {
         return (Number(year) + 7) % 12 || 12;
     }
+
     /**
      * 獲取月幹。公式：月幹=年幹*2+月支
      * @param {Object} nianGanIndex
@@ -217,6 +225,7 @@ let WanNianLi = (function () {
         index === 0 && (index = 10);
         return index;
     }
+
     /**
      * 獲取月支。公式：月支=農曆月份
      * @param {Object} lMonth
@@ -224,6 +233,7 @@ let WanNianLi = (function () {
     function getYueZhiIndex(lMonth) {
         return Number(lMonth);
     }
+
     /**
      * 獲取時支。公式：時支=小時/2 - 1（小時為偶數時），時支=(小時+1)/2 - 1（小時為奇數時）
      * @param {Object} hour
@@ -236,6 +246,7 @@ let WanNianLi = (function () {
             return (hour + 1) / 2 - 1;
         }
     }
+
     /**
      * 獲取時幹。公式：時幹=日幹*2 + 時支
      * @param {Object} riGanIndex
@@ -256,6 +267,7 @@ let WanNianLi = (function () {
         });
         return temp;
     }
+
     return {
         getResult: function (date) {
             let __bazi = {
@@ -270,9 +282,21 @@ let WanNianLi = (function () {
                 date: "",
                 hour: "",
             };
-            let nianGanIndex = (nianZhiIndex = yueGanIndex = yueZhiIndex = riGanIndex = shiZhiIndex = shiGanIndex = -1);
-            let y1 = (y2 = m1 = m2 = "");
-            let serial = (riGan = "");
+            let nianGanIndex = -1;
+            let nianZhiIndex = -1;
+            let yueGanIndex = -1;
+            let yueZhiIndex = -1;
+            let riGanIndex = -1;
+            let shiZhiIndex = -1;
+            let shiGanIndex = -1;
+
+            let y1 = "";
+            let y2 = "";
+            let m1 = "";
+            let m2 = "";
+
+            let serial = "";
+            let riGan = "";
 
             nianGanIndex = getNianGanIndex(date.cYear);
             y1 = __TianGan[nianGanIndex];
@@ -322,17 +346,3 @@ let WanNianLi = (function () {
         },
     };
 })();
-
-// let a = {
-// 	cYear: 2016, //公曆年份
-// 	cMonth: 7, //公曆月份
-// 	lMonth: 6, //農曆月份
-// 	cDay: 15, //公曆日期
-// 	lDay: 12, //農曆日期
-// 	hour: 22,
-// 	minute: 16
-// };
-
-// let result = WanNianLi.getResult(a);
-// console.log(result);
-module.exports = WanNianLi;

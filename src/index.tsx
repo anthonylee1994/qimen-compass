@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "reportWebVitals";
+import {register} from "serviceWorkerRegistration";
 import {ChakraProvider, extendTheme} from "@chakra-ui/react";
 import {App} from "app";
 import "index.css";
@@ -13,3 +14,4 @@ root.render(
 );
 
 reportWebVitals();
+register();

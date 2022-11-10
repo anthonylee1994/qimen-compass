@@ -19,7 +19,7 @@ export const BaziPanel = React.memo(() => {
     }
 
     return (
-        <Box position="absolute" bottom={0} right={0} bgColor="rgb(0 0 0 / 50%)" width='100%'>
+        <Box position="absolute" bottom={0} right={0} bgColor="rgb(0 0 0 / 50%)" width='100%' pb={8}>
             <Table size="sm" variant="simple" colorScheme="gray">
                 <Thead>
                     <Tr>

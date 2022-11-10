@@ -1,6 +1,6 @@
-const Config = require("./config");
-const Calendar = require("./calendar");
-const Wannianli = require("./wannianli");
+import {Config} from './config';
+import {Calendar} from './calendar';
+import {Wannianli} from './wannianli';
 
 export class Qimen {
     constructor(year, month, day, hour) {
