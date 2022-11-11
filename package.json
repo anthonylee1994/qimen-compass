@@ -2,6 +2,7 @@
     "name": "qimen-compass",
     "version": "0.1.0",
     "private": true,
+    "homepage": "./",
     "dependencies": {
         "@chakra-ui/icons": "^2.0.11",
         "@chakra-ui/react": "^2.3.7",
@@ -41,6 +42,7 @@
     },
     "scripts": {
         "format": "prettier --write src/**",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -63,5 +65,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }

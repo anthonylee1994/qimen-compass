@@ -6,6 +6,9 @@ interface CompatibleDeviceOrientationEvent extends DeviceOrientationEvent {
     webkitCompassHeading?: number;
 }
 
+const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+const isAndroid = /Android/.test(navigator.userAgent);
+
 export const useCompass = () => {
     const [angle, setAngle] = React.useState(0);
     const [debouncedAngle] = useDebounce(angle, 10);
@@ -18,13 +21,23 @@ export const useCompass = () => {
     }, [canRequestPermission]);
 
     const init = React.useCallback(() => {
-        window.addEventListener(
-            "deviceorientation",
-            (e: CompatibleDeviceOrientationEvent) => {
-                setAngle(e?.webkitCompassHeading || e.alpha || 0);
-            },
-            true
-        );
+        if (isiOS) {
+            window.addEventListener(
+                "deviceorientation",
+                (e: CompatibleDeviceOrientationEvent) => {
+                    setAngle(e?.webkitCompassHeading ?? 0);
+                },
+                true
+            );
+        } else if (isAndroid) {
+            window.addEventListener(
+                "deviceorientationabsolute",
+                (e: any) => {
+                    setAngle(-e.alpha);
+                },
+                true
+            );
+        }
     }, []);
 
     return {
