@@ -667,4 +667,4 @@ export class Config {
 
         return Object.assign(yang, yin)[gan];
     }
-};
+}

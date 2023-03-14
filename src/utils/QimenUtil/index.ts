@@ -1,6 +1,5 @@
 import {Qimen} from "./qimen";
 import {QimenResult, 八卦, 地支, 天干, 星, 神, 門, 驛馬} from "./types";
-import {theme} from "@chakra-ui/react";
 
 export class QimenUtil {
     public static result(date?: Date): QimenResult {
@@ -16,19 +15,19 @@ export class QimenUtil {
         switch (value) {
             case "甲":
             case "乙":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "丙":
             case "丁":
-                return theme.colors.red[500];
+                return "#ff0000";
             case "戊":
             case "己":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "庚":
             case "辛":
-                return theme.colors.yellow[500];
+                return "#ffff00";
             case "壬":
             case "癸":
-                return theme.colors.blue[500];
+                return "#00ffff";
         }
     }
 
@@ -43,8 +42,10 @@ export class QimenUtil {
             case "合":
                 return "六合";
             case "虎":
+            case "勾":
                 return "白虎";
             case "玄":
+            case "雀":
                 return "玄武";
             case "地":
                 return "九地";
@@ -56,21 +57,23 @@ export class QimenUtil {
     public static eightBeastColor(value: 神) {
         switch (value) {
             case "符":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "蛇":
-                return theme.colors.red[500];
+                return "#ff0000";
             case "陰":
-                return theme.colors.yellow[500];
+                return "#ffff00";
             case "合":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "虎":
-                return theme.colors.yellow[500];
+            case "勾":
+                return "#ffff00";
             case "玄":
-                return theme.colors.blue[500];
+            case "雀":
+                return "#00ffff";
             case "地":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "天":
-                return theme.colors.yellow[500];
+                return "#ffff00";
         }
     }
 
@@ -98,21 +101,21 @@ export class QimenUtil {
     public static eightDoorColor(value: 門) {
         switch (value) {
             case "休":
-                return theme.colors.blue[500];
+                return "#00ffff";
             case "生":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "傷":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "杜":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "景":
-                return theme.colors.red[500];
+                return "#ff0000";
             case "死":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "驚":
-                return theme.colors.yellow[500];
+                return "#ffff00";
             case "開":
-                return theme.colors.yellow[500];
+                return "#ffff00";
         }
     }
 
@@ -129,6 +132,7 @@ export class QimenUtil {
             case "英":
                 return "天英";
             case "禽":
+            case "芮":
                 return "天芮";
             case "柱":
                 return "天柱";
@@ -140,21 +144,22 @@ export class QimenUtil {
     public static eightStarColor(value: 星) {
         switch (value) {
             case "蓬":
-                return theme.colors.blue[500];
+                return "#00ffff";
             case "任":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "沖":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "輔":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "英":
-                return theme.colors.red[500];
+                return "#ff0000";
             case "禽":
-                return theme.colors.orange[500];
+            case "芮":
+                return "#ff6500";
             case "柱":
-                return theme.colors.yellow[500];
+                return "#ffff00";
             case "心":
-                return theme.colors.yellow[500];
+                return "#ffff00";
         }
     }
 
@@ -184,21 +189,21 @@ export class QimenUtil {
     public static eightDiagramColor(value: 八卦) {
         switch (value) {
             case "乾":
-                return theme.colors.yellow[500];
+                return "#ffff00";
             case "坎":
-                return theme.colors.blue[500];
+                return "#00ffff";
             case "艮":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "震":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "巽":
-                return theme.colors.green[500];
+                return "#00ff00";
             case "離":
-                return theme.colors.red[500];
+                return "#ff0000";
             case "坤":
-                return theme.colors.orange[500];
+                return "#ff6500";
             case "兌":
-                return theme.colors.yellow[500];
+                return "#ffff00";
         }
     }
 

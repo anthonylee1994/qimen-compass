@@ -1,6 +1,6 @@
-import {Config} from './config';
-import {Calendar} from './calendar';
-import {Wannianli} from './wannianli';
+import {Config} from "./config";
+import {Calendar} from "./calendar";
+import {Wannianli} from "./wannianli";
 
 export class Qimen {
     constructor(year, month, day, hour) {

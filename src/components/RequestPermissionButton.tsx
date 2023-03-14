@@ -1,25 +1,15 @@
 import React from "react";
-import {IconButton} from "@chakra-ui/react";
-import {RepeatIcon} from "@chakra-ui/icons";
+import {Flex, Switch, Text} from "@chakra-ui/react";
 
 interface Props {
-    onClick: () => void;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const RequestPermissionButton = React.memo<Props>(({onClick}) => {
+export const RequestPermissionButton = React.memo<Props>(({onChange}) => {
     return (
-        <IconButton
-            _hover={{}}
-            _active={{}}
-            borderRadius="full"
-            borderColor="red.400"
-            variant="outline"
-            onClick={onClick}
-            position="absolute"
-            top={3}
-            right={3}
-            aria-label="request permission"
-            icon={<RepeatIcon color="white" />}
-        />
+        <Flex position='absolute' bottom={0} p={4} alignItems='center' flexDirection='column'>
+            <Switch size='lg' colorScheme='orange' onChange={onChange} />
+            <Text py={1} color='white'>指南針</Text>
+        </Flex>
     );
 });

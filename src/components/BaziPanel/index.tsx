@@ -19,7 +19,7 @@ export const BaziPanel = React.memo(() => {
     }
 
     return (
-        <Box position="absolute" bottom={0} right={0} bgColor="rgb(0 0 0 / 50%)" width='100%' pb={8}>
+        <Box position="absolute" bottom={0} right={0} bgColor="rgb(0 0 0 / 50%)" width="100%" pb={8}>
             <Table size="sm" variant="simple" colorScheme="gray">
                 <Thead>
                     <Tr>
@@ -96,33 +96,33 @@ export const BaziPanel = React.memo(() => {
                         </Td>
                     </Tr>
                     <Tr>
-                        <Th colSpan={5} px={2} py={1} fontSize="xs" color='white' textAlign='right'>
+                        <Th colSpan={5} px={2} py={1} fontSize="xs" color="white" textAlign="right">
                             值符
                         </Th>
-                        <Td colSpan={3} px={2} py={1} fontSize="xs" color='white' textAlign='right'>
-                            <Box fontWeight='bold' display='inline' color={QimenUtil.eightStarColor(qimenResult.值符值使.值符星宮[0].replace('芮', '禽') as 星)}>
-                                {QimenUtil.eightStarTitle(qimenResult.值符值使.值符星宮[0].replace('芮', '禽') as 星)}
+                        <Td colSpan={3} px={2} py={1} fontSize="xs" color="white" textAlign="right">
+                            <Box fontWeight="bold" display="inline" color={QimenUtil.eightStarColor(qimenResult.值符值使.值符星宮[0].replace("芮", "禽") as 星)}>
+                                {QimenUtil.eightStarTitle(qimenResult.值符值使.值符星宮[0].replace("芮", "禽") as 星)}
                             </Box>
                             {`落${QimenUtil.eightDiagramTitle(qimenResult.值符值使.值符星宮[1] as 八卦).slice(1)}宮`}
                         </Td>
                     </Tr>
                     <Tr>
-                        <Th colSpan={5} px={2} py={1} fontSize="xs" color='white' textAlign='right'>
+                        <Th colSpan={5} px={2} py={1} fontSize="xs" color="white" textAlign="right">
                             值使
                         </Th>
-                        <Td colSpan={3} px={2} py={1} fontSize="xs" color='white' textAlign='right'>
-                            <Box fontWeight='bold' display='inline' color={QimenUtil.eightDoorColor(qimenResult.值符值使.值使門宮[0])}>
+                        <Td colSpan={3} px={2} py={1} fontSize="xs" color="white" textAlign="right">
+                            <Box fontWeight="bold" display="inline" color={QimenUtil.eightDoorColor(qimenResult.值符值使.值使門宮[0])}>
                                 {QimenUtil.eightDoorTitle(qimenResult.值符值使.值使門宮[0] as 門)}
                             </Box>
                             {`落${QimenUtil.eightDiagramTitle(qimenResult.值符值使.值使門宮[1] as 八卦).slice(1)}宮`}
                         </Td>
                     </Tr>
                     <Tr>
-                        <Th colSpan={5} px={2} py={1} fontSize="xs" color='white' textAlign='right'>
+                        <Th colSpan={5} px={2} py={1} fontSize="xs" color="white" textAlign="right">
                             天乙
                         </Th>
-                        <Td colSpan={3} px={2} py={1} fontSize="xs" fontWeight='bold' color={QimenUtil.eightStarColor(qimenResult.天乙.replace('芮', '禽') as 星)} textAlign='right'>
-                            {QimenUtil.eightStarTitle(qimenResult.天乙.replace('芮', '禽') as 星)}
+                        <Td colSpan={3} px={2} py={1} fontSize="xs" fontWeight="bold" color={QimenUtil.eightStarColor(qimenResult.天乙.replace("芮", "禽") as 星)} textAlign="right">
+                            {QimenUtil.eightStarTitle(qimenResult.天乙.replace("芮", "禽") as 星)}
                         </Td>
                     </Tr>
                 </Tbody>
