@@ -15,7 +15,7 @@ export class BaziUtil {
         const m = moment(d);
 
         return lunar(...m.format("YYYY-MM-DD").split("-"))
-            .setTime(m.format("HH"))
+            .setTime(Number(m.format("HH")))
             .getJson();
     }
 
