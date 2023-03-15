@@ -24,9 +24,7 @@ export const EightDoorCircle = React.memo<Props>(({size}) => {
                 const door = qimenResult.門[eightDiagrams[index]];
                 return (
                     <Flex justifyContent="center" width={190} position="relative" fontSize={20}>
-                        <Text color={QimenUtil.eightDoorColor(door)}>
-                            {QimenUtil.eightDoorTitle(door)}
-                        </Text>
+                        <Text color={QimenUtil.eightDoorColor(door)}>{QimenUtil.eightDoorTitle(door)}</Text>
 
                         {horsePosition === index && (
                             <Flex

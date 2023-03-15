@@ -24,9 +24,7 @@ export const EightBeastCircle = React.memo<Props>(({size}) => {
                 const beast = qimenResult.神[eightDiagrams[index]];
                 return (
                     <Flex justifyContent="center" width={210} position="relative" fontSize={20}>
-                        <Text color={QimenUtil.eightBeastColor(beast)}>
-                            {QimenUtil.eightBeastTitle(beast)}
-                        </Text>
+                        <Text color={QimenUtil.eightBeastColor(beast)}>{QimenUtil.eightBeastTitle(beast)}</Text>
                         {emptyPosition.includes(index) && (
                             <Flex
                                 justifyContent="center"

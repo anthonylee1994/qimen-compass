@@ -8,7 +8,7 @@ export const DateDisplay = React.memo(() => {
     const {節氣} = useAppStore(state => state.qimenResult);
 
     return (
-        <Flex mb={1} flexDirection="column" alignItems="center" width="150px" color='white'>
+        <Flex mb={1} flexDirection="column" alignItems="center" width="150px" color="white">
             <Flex>{moment(date).format("YYYY年M月D日")}</Flex>
             <Flex width="120px" justifyContent="space-between">
                 <Flex>{moment(date).format("HH:mm")}</Flex>

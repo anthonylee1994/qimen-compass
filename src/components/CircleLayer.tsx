@@ -17,7 +17,17 @@ export const CircleLayer = React.memo<Props>(({size, content}) => {
             ))}
 
             {range(0, 8).map(num => (
-                <Flex borderRadius="full" key={num} position="absolute" width={size} height={size} borderWidth={1} borderColor='white' clipPath="polygon(50% 50%, 29% 0, 71% 0)" transform={`rotate(${45 * num}deg)`} />
+                <Flex
+                    borderRadius="full"
+                    key={num}
+                    position="absolute"
+                    width={size}
+                    height={size}
+                    borderWidth={1}
+                    borderColor="white"
+                    clipPath="polygon(50% 50%, 29% 0, 71% 0)"
+                    transform={`rotate(${45 * num}deg)`}
+                />
             ))}
 
             {range(0, 8).map(num => (

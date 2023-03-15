@@ -1,7 +1,7 @@
 import React from "react";
-import {Flex, IconButton, Input, InputGroup, InputLeftElement, InputRightElement} from "@chakra-ui/react";
 import moment from "moment";
 import {ArrowBackIcon, ArrowForwardIcon, TimeIcon} from "@chakra-ui/icons";
+import {Flex, IconButton, Input, InputGroup, InputLeftElement, InputRightElement} from "@chakra-ui/react";
 
 interface Props {
     date: Date;
@@ -27,7 +27,7 @@ export const DateTimePicker = React.memo<Props>(({date, onChange}) => {
     );
 
     return (
-        <Flex position="absolute" top={0} py={1} px={5} width="full" justifyContent="center" alignItems='center'>
+        <Flex position="absolute" top={0} py={1} px={5} width="full" justifyContent="center" alignItems="center">
             <InputGroup size="md" width="100%" maxWidth="300px">
                 <InputLeftElement>
                     <IconButton borderRadius="full" onClick={onBack} colorScheme="gray" size="sm" aria-label="back" icon={<ArrowBackIcon fontSize="lg" />} />

@@ -26,14 +26,14 @@ export const EightStarCircle = React.memo<Props>(({size}) => {
                 return (
                     <Flex justifyContent="center" width={120} position="relative" fontSize={20}>
                         {sky[1] && (
-                            <Text transform="rotate(-18deg)" position="absolute" top={2} left='-2px' color={QimenUtil.heavenColor(sky[1])}>
+                            <Text transform="rotate(-18deg)" position="absolute" top={2} left="-2px" color={QimenUtil.heavenColor(sky[1])}>
                                 {sky[1]}
                             </Text>
                         )}
                         <Text color={QimenUtil.eightStarColor(star)} mt={0.5}>
                             {QimenUtil.eightStarTitle(star)}
                         </Text>
-                        <Text transform="rotate(18deg)" position="absolute" top={2} right='-2px' color={QimenUtil.heavenColor(sky[0])}>
+                        <Text transform="rotate(18deg)" position="absolute" top={2} right="-2px" color={QimenUtil.heavenColor(sky[0])}>
                             {sky[0]}
                         </Text>
                     </Flex>

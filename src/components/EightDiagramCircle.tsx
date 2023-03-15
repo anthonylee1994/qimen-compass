@@ -24,7 +24,7 @@ export const EightDiagramCircle = React.memo<Props>(({size}) => {
                         <Text color={QimenUtil.eightDiagramColor(diagram)} mt={0.5}>
                             {QimenUtil.eightDiagramTitle(diagram)}
                         </Text>
-                        <Text transform="rotate(18deg)" position="absolute" top={2} right='-2px' color={QimenUtil.heavenColor(earth)}>
+                        <Text transform="rotate(18deg)" position="absolute" top={2} right="-2px" color={QimenUtil.heavenColor(earth)}>
                             {earth}
                         </Text>
                     </Flex>

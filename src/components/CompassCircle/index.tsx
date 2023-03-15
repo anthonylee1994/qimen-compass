@@ -9,5 +9,5 @@ export const CompassCircle = React.memo(() => {
             <Directions />
             <Pin />
         </CircleContainer>
-    )
+    );
 });

@@ -8,7 +8,7 @@ interface Props {
 
 export const BodyCell = React.memo<Props>(({color, children}) => {
     return (
-        <Td px='18px' py={2} fontSize="2xl" color={color} textAlign="center">
+        <Td px="18px" py={2} fontSize="2xl" color={color} textAlign="center">
             {children}
         </Td>
     );
