@@ -13,9 +13,7 @@ export const App = React.memo(() => {
     const setDate = useAppStore(state => state.setDate);
     const setCompassEnabled = useAppStore(state => state.setCompassEnabled);
 
-    React.useEffect(() => {
-        init();
-    }, [init]);
+    React.useEffect(init, [init]);
 
     return (
         <AngleContext.Provider value={angle}>

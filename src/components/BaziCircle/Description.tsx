@@ -6,8 +6,6 @@ import {QimenUtil} from "utils/QimenUtil";
 export const Description = React.memo(() => {
     const {排局, 值符值使, 天乙} = useAppStore(state => state.qimenResult);
 
-    console.log("天乙", 天乙);
-
     return (
         <Flex mt={1} flexDirection="column" width="100px" color="white">
             <Flex justifyContent="center">{排局}</Flex>

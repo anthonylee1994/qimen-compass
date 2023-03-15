@@ -10,8 +10,6 @@ export const BaziTable = React.memo(() => {
     const qimenResult = useAppStore(state => state.qimenResult);
     const {年干, 年支, 月干, 月支, 日干, 日支, 時干, 時支} = useBaziParts(qimenResult);
 
-    console.log("qimenResult", qimenResult);
-
     return (
         <Table width={10}>
             <Thead>

@@ -1,13 +1,13 @@
 import React, {useContext} from "react";
-import {BaziCircle} from "../BaziCircle";
+import {BaziCircle} from "./BaziCircle";
 import {EightDiagramCircle} from "components/EightDiagramCircle";
-import {EightDoorCircle} from "../EightDoorCircle";
-import {EightStarCircle} from "../EightStarCircle";
-import {EightBeastCircle} from "../EightBeastCircle";
+import {EightDoorCircle} from "./EightDoorCircle";
+import {EightStarCircle} from "./EightStarCircle";
+import {EightBeastCircle} from "./EightBeastCircle";
 import {Flex} from "@chakra-ui/react";
 import {AngleContext} from "contexts/AngleContext";
 import {useAppStore} from "stores/useAppStore";
-import {CompassCircle} from "../CompassCircle";
+import {CompassCircle} from "./CompassCircle";
 
 export const Compass = React.memo(() => {
     const angle = useContext(AngleContext);

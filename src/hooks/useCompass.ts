@@ -21,22 +21,27 @@ export const useCompass = () => {
     }, [canRequestPermission]);
 
     const init = React.useCallback(() => {
+        let listener: (e: any) => void;
+
         if (isiOS) {
-            window.addEventListener(
-                "deviceorientation",
-                (e: CompatibleDeviceOrientationEvent) => {
-                    setAngle(e?.webkitCompassHeading ?? 0);
-                },
-                true
-            );
+            listener = (e: CompatibleDeviceOrientationEvent) => {
+                setAngle(e?.webkitCompassHeading ?? 0);
+            };
+
+            window.addEventListener("deviceorientation", listener, true);
+
+            return () => {
+                window.removeEventListener("deviceorientation", listener, true);
+            };
         } else if (isAndroid) {
-            window.addEventListener(
-                "deviceorientationabsolute",
-                (e: any) => {
-                    setAngle(-e.alpha);
-                },
-                true
-            );
+            listener = (e: any) => {
+                setAngle(-e.alpha);
+            };
+            window.addEventListener("deviceorientationabsolute", listener, true);
+
+            return () => {
+                window.removeEventListener("deviceorientationabsolute", listener, true);
+            };
         }
     }, []);
 
